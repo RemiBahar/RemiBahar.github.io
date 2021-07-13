@@ -203,10 +203,7 @@ list-style-type: none;
   padding: 15px 30px 15px 30px;
 }
 
-.mySlides img, .mySlides video {
-  width: 50%;
-  margin-left:25%;
-}
+
 
 .card h5{
     text-align: center;
@@ -374,7 +371,12 @@ background-color: black;
 animation-name: fade;
 animation-duration: 1.5s;
 }
-
+@media screen and (min-width: 640px) {
+  .mySlides img, .mySlides video {
+    width: 50%;
+    margin-left:25%;
+  }
+}
 
 @media screen and (max-width: 640px) {
 
@@ -384,6 +386,11 @@ animation-duration: 1.5s;
       grid-template-columns: auto auto;
       column-gap: 2rem;
       row-gap: 2rem;
+    }
+
+    .mySlides img, .mySlides video {
+      width: 90%;
+      margin-left:5%;
     }
 }
 
