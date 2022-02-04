@@ -10,9 +10,27 @@
 
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="main.css">
-  
 
+    <!-- Intro -->
+    <link rel="stylesheet" href="main.css">
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <div class="grid-item grid-item--center">
+            <h1>Remi Bahar</h1>
+            <h2>Slough, UK</h2>
+            <h2><img src="Images/profile.jpg" alt="Me" class="round"></h2>
+        </div>
+          <p>
+            Hi, I'm Remi. I'm a 2:1 physics graduate and aspiring software engineer with over 1 years experience in full stack web development and over 2 years experience in data analysis in python.
+        </p>
+        <p>
+            In my spare-time I love trying new things from travelling to music to food.
+        </p>
+        </div>
+    </div>
+
+    
     <!-- Skills -->
     <h2> Skills </h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
@@ -245,6 +263,14 @@
 
       </div>
 
+      <script>
+      $(".jumbotron").css({ height: $(window).height() + "px" });
+
+      $(window).on("resize", function() {
+        $(".jumbotron").css({ height: $(window).height() + "px" });
+      });
+    </script>
+        
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

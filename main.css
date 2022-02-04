@@ -11,9 +11,29 @@ h1, h2, .card {
 }
 
 .row {
-  margin-right: none; /* Stops overflow */
+  margin-right: 0; /* Stops overflow */
+  margin-left: 0;
 }
 
+/* For hero section */
+
+.jumbotron {
+  color: white;
+  background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vh;
+  padding: 2vw;
+}
+
+.jumbotron p {
+  font-size: 1.5rem;
+}
+
+.round {
+  border-radius: 50%;
+}
 
 
 /* Ensure video not too big */
@@ -35,11 +55,19 @@ img {
       width: 50%;
       margin-left:25%;
     }
+
+    .round {
+      height: calc(150px + 5vw);
+    }
   }
   
   @media screen and (max-width: 640px) {
       video {
         width: 90%;
         margin-left:5%;
+      }
+
+      .round {
+        height: calc(150px + 10vw);
       }
   }
