@@ -2,8 +2,16 @@ html{
     text-align: justify;
 }
 
-h1, h2{
+h1, h2, .card {
     text-align: center
+}
+
+.list-group-item {
+  border: none;
+}
+
+.row {
+  margin-right: none; /* Stops overflow */
 }
 
 
