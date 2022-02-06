@@ -1,406 +1,134 @@
-/* General */
-
-body {
-  font-family:verdana;
-  margin: 0px;
-  width: 100%;
-  height:100%;
-  padding-bottom: 10vw;
-  -webkit-transform: translateZ(0); 
-  -moz-transform: translateZ(0);
-  transform: translateZ(0); 
-}
-
-.bluegradient {
-  background-color: #36096d;
-  background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
-  color: white;
-  padding: 2vw;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h1, h2, h3 {
-    text-align: center; 
-    margin: 0px;
-    margin-bottom: 1rem;
+/* Typeography */
+h1, h2, .card {
+  text-align: center
 }
 
 h2 {
-  font-size: 1.75rem;
+  margin-bottom: 2rem;
 }
 
-h3 {
-  font-size: 1.5rem;
+
+svg {
+  fill: white;
+  margin-right: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
-p {
+nav {
+  font-size: 1.25rem;
+}
+
+
+/* Sections */
+
+.bluebg, .whitebg {
+  padding-top:70px;
+  padding-bottom:70px
+}
+.bluebg {
+  color: white;
+  background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* CSS Grid */
+.row {
+  margin-right: 0; /* Stops overflow */
+  margin-left: 0;
+}
+
+.col button {
+  margin-bottom: 2rem;
+}
+
+
+/* Card */
+
+.card {
+  color: black;
   text-align: justify;
 }
 
+/* Ensure video not too big */
+video, img{
+  max-height: 50vh;
+}
 
+video {
+  width: 100%;
+}
+
+/* Center align images */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-header {
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* Hero Section */
 
 .round {
-    border-radius: 50%;
-    height: 20vw;
-    max-height: 150px;
+  border-radius: 50%;
+  height: calc(150px + 5vw);
 }
 
-.white {
-    background-color: white; 
-    padding: 2vw; 
-}
-
-/* CSS grid */ 
-
-.grid-container {
-  display: grid;
-}
-
-.grid-container--1 {
-grid-template-columns: auto;
-}
-
-.grid-container--2 {
-grid-template-columns: auto auto;
-grid-column-gap: 4vw;
-}
-
-.grid-container--3 {
-grid-template-columns: auto auto auto;
-grid-column-gap : 5px;
-}
-
-.grid-container--5 {
-grid-template-columns: auto auto auto auto auto;
-}
-
-.grid-container--gaps {
-grid-row-gap: 2vw;
-grid-column-gap: 4vw;
-grid-auto-rows: 1fr
-}
-
-.grid-container--center{
-padding-left: 10%;
-padding-right: 10%;
-grid-column-gap: 10%;
-}
-
-.grid-container-3 {
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-
-.grid-container-2 {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-row-gap: 30px;
-  grid-column-gap: 10px;
-  grid-auto-rows: 1fr
-}
-
-.grid-container-4 {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-row-gap: 30px;
-  grid-column-gap: 2px;
-  grid-auto-rows: 1fr;
-}
-
-.grid-item {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.grid-item--center {
-  align-items: center;
-}
-
-.grid-item--span-all {
-  grid-column: 1/-1;
-}
-
-.grid-item--3-rows{
-  grid-row-start: 1;
-  grid-row-end: 3;
+.container p {
+  font-size: 1.5rem;
 }
 
 
-
-
-.right {
-  text-align: right;
-}
-
-.image {
-  /*max-width:36vw;*/
-}
-
-.hidden {
-display: none;
-}
-
-.button {
-color: dodgerblue !important;
-text-decoration: none;
-}
-
-.floatleft{
-float: left;
-}
-
-.floatright {
-float:right;
-}
-
-.button:hover {
-color: darkblue;
-}
-
-.center {
-margin-left: 40vw;
-}
-
-.ul {
-list-style-type: none;
-}
-
-.card{
-  background-color: white;
-  border: 1px solid rgba(0,0,0,.125);
-  border-radius: .25rem;
-}
-
-.flip-card-front img {
-  max-width: 80%;
-
-}
-
-.card-grid-container--2 {
-  grid-template-columns: auto auto;
-  display: grid;
-  /*grid-auto-rows: 1fr; equal height rows*/
-  column-gap: 2rem;
-  row-gap: 2rem;
-}
-
-.card-grid-container--4 {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  column-gap: 2rem;
-  row-gap: 2rem;
-}
-
-
-
-.mySlides .card {
-  min-height: 100vh;
-  min-width: 100%;
-  padding: 15px 30px 15px 30px;
-}
-
-
-
-.card h5{
-    text-align: center;
-
-}
-
-
-.card-body {
-  color: black;
-}
-
-.test{
-  clear:both;
-}
-
-.flip-card {
-  background-color: transparent;/*
-  width: 300px;
-  height: 200px;*/
-  height: calc(300px + 2vw);
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.1s;
-  transform-style: preserve-3d;
-}
-
-.flip-card-inner{
+/* Skill section */
+.skills {
   text-align: center;
 }
 
-ul {
-    text-align: left;
+.skill {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 12px 12px 12px 12px;
+  -moz-border-radius: 12px 12px 12px 12px;
+  -webkit-border-radius: 12px 12px 12px 12px;
+  border: 0px solid #000000;
+  background-color: rgba(230,230,230,0.2);
+
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
+.skill:hover {
+  background-color: rgba(89, 89, 89, 0.2);
+  color: white;
 
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  -moz-backface-visibility: hidden; /* Mozilla */
-  backface-visibility: hidden;
 }
 
-.flip-card:hover .flip-card-front{
-  transform: rotateY(-180deg);
-}
+/* Responsive Styling */
+
   
-.flip-card:hover .flip-card-back {
-  transform: rotateY(0deg);
-}
+  /* md breakpoint bootstrap */
+  @media screen and (max-width: 768px) {
+      video {
+        width: 90%;
+        margin-left:5%;
+      }
 
-/* Style the front side (fallback if image is missing) */
-.flip-card-front:hover {
-    display: none;
-}
+      .round {
+        height: calc(150px + 10vw);
+      }
 
-/* Style the back side */
-.flip-card-back {
-  transform: rotateY(180deg);
-}
+      .col button {
+        min-width: 50vw;
+      }
 
 
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-max-width: 1000px;
-position: relative;
-margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-display: none;
-min-height: 100vh;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-cursor: pointer;
-position: absolute;
-top: 50%;
-width: auto;
-margin-top: -22px;
-padding: 16px;
-color: black;
-font-weight: bold;
-font-size: 18px;
-transition: 0.6s ease;
-border-radius: 0 3px 3px 0;
-user-select: none;
-}
-
-.dot{
-  top:80%;
-}
-
-/* Position the "next button" to the right */
-.next {
-right: 0;
-border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-background-color: rgba(0,0,0,0.8);
-color: white;
-}
-
-.flip-card-front:hover{
-  color: red;
-}
-
-/* Caption text */
-.text {
-color: #f2f2f2;
-font-size: 15px;
-padding: 8px 12px;
-position: absolute;
-bottom: 8px;
-width: 100%;
-text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-color: #f2f2f2;
-font-size: 12px;
-padding: 8px 12px;
-position: absolute;
-top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-cursor: pointer;
-height: 15px;
-width: 15px;
-margin: 0 2px;
-background-color:white;
-border-radius: 50%;
-display: inline-block;
-transition: background-color 0.6s ease;
-bottom: 5%;
-}
-
-.active, .dot:hover {
-background-color: black;
-}
-
-/* Fading animation */
-.fade {
--webkit-animation-name: fade;
--webkit-animation-duration: 1.5s;
-animation-name: fade;
-animation-duration: 1.5s;
-}
-@media screen and (min-width: 640px) {
-  .mySlides img, .mySlides video {
-    width: 50%;
-    margin-left:25%;
+      
   }
-}
-
-@media screen and (max-width: 640px) {
-
-
-  .card-grid-container--4 {
-      display: grid;
-      grid-template-columns: auto auto;
-      column-gap: 2rem;
-      row-gap: 2rem;
-    }
-
-    .mySlides img, .mySlides video {
-      width: 90%;
-      margin-left:5%;
-    }
-}
-
-@-webkit-keyframes fade {
-from {opacity: .4}
-to {opacity: 1}
-}
-
-@keyframes fade {
-from {opacity: .4}
-to {opacity: 1}
-}
-
