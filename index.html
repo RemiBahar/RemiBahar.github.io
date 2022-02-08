@@ -17,12 +17,8 @@
 
   <!-- For scrollspy navbar -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
-  
-
-  
   <!-- Custom styling -->
   <link rel="stylesheet" href="main.css">
 
@@ -408,46 +404,15 @@
     <script defer>
 
       $(window).bind("load", function() {
-          $("video.lazy source").each(function() {
+          $("video source").each(function() {
           var sourceFile = $(this).attr("data-src");
           $(this).attr("src", sourceFile);
           var video = this.parentElement;
-          video.load();
-          
+          video.load();  
         });
       });
 
   </script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
-
-if ("IntersectionObserver" in window) {
-var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(function(video) {
-    if (video.isIntersecting) {
-      for (var source in video.target.children) {
-        var videoSource = video.target.children[source];
-        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-          videoSource.src = videoSource.dataset.src;
-        }
-      }
-
-      video.target.play();
-      video.target.classList.remove("lazy");
-      lazyVideoObserver.unobserve(video.target);
-    }
-  });
-});
-
-lazyVideos.forEach(function(lazyVideo) {
-  lazyVideoObserver.observe(lazyVideo);
-});
-}
-});
-</script>
-  
 
 
 </body>
