@@ -35,7 +35,7 @@
         <div class="navbar navbar-expand" id="navbarTogglerDemo01">
             <ul class="navbar-nav nav-pills mx-auto">
                 <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link active" href="#about">About</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#skills">Skills</a>
@@ -154,8 +154,8 @@
               </div>
               <div class="card-body">
                 <div class="embed-responsive embed-responsive-16by9">
-                   <video class="embed-responsive-item" autoplay="autoplay" loop="loop" controls muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto">
-                      <source src="Videos/social_network_simulation.mp4" alt="social network simulation" type="video/mp4">
+                   <video class="embed-responsive-item lazy" autoplay="autoplay" loop="loop" controls muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto"  poster="Images/Server.PNG">
+                      <source data-src="Videos/social_network_simulation.mp4" alt="social network simulation" type="video/mp4">
                   </video>
               </div>
               
@@ -188,8 +188,8 @@
               </div>
               <div class="card-body">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <video class="embed-responsive-item" autoplay="autoplay" loop="loop" controls muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto">
-                    <source src="Videos/twitter_api_app.mp4" alt="twitter api cli" type="video/mp4">
+                  <video class="embed-responsive-item lazy" autoplay="autoplay" loop="loop" controls muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto"  poster="Images/Server.PNG">
+                    <source data-src="Videos/twitter_api_app.mp4" type="video/mp4">
                   </video>
               </div>
 
@@ -229,8 +229,8 @@
               </div>
               <div class="card-body">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <video class="embed-responsive-item" autoplay="autoplay" loop="loop" controls muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto">
-                    <source src="Videos/stickman_demo.mp4" alt="stickman simulation" type="video/mp4">
+                  <video class="embed-responsive-item lazy" autoplay="autoplay" loop="loop" controls muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto"  poster="Images/Server.PNG">
+                    <source data-src="Videos/stickman_demo.mp4" alt="stickman simulation" type="video/mp4">
                   </video>
               </div>
       
@@ -260,9 +260,10 @@
               </div>
               <div class="card-body">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <video class="embed-responsive-item" autoplay="autoplay" loop="loop" controls muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto">
-                    <source src="Videos/forest_fire_simulation.mp4" alt="forest fire simulation" type="video/mp4">
+                  <video class="embed-responsive-item lazy" autoplay="autoplay" loop="loop" controls muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto"  poster="Images/Server.PNG">
+                    <source data-src="Videos/forest_fire_simulation.mp4" alt="forest fire simulation" type="video/mp4">
                   </video>
+                
               </div>
     
               <p>
@@ -399,6 +400,34 @@
         
     </div>
 
+<script>
+          document.addEventListener("DOMContentLoaded", function() {
+      var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+      if ("IntersectionObserver" in window) {
+        var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(video) {
+            if (video.isIntersecting) {
+              for (var source in video.target.children) {
+                var videoSource = video.target.children[source];
+                if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                  videoSource.src = videoSource.dataset.src;
+                }
+              }
+
+              video.target.load();
+              video.target.classList.remove("lazy");
+              lazyVideoObserver.unobserve(video.target);
+            }
+          });
+        });
+
+        lazyVideos.forEach(function(lazyVideo) {
+          lazyVideoObserver.observe(lazyVideo);
+        });
+      }
+    });
+    </script>
 
 </body>
 </html>
