@@ -135,6 +135,10 @@ img {
   
   /* md breakpoint bootstrap */
   @media screen and (max-width: 768px) {
+      table {
+        width: 100% !important;
+      }
+      
       video {
         width: 90%;
         margin-left:5%;
