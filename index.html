@@ -39,8 +39,8 @@
                 <a class="nav-link active" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#skills">Skills</a>
-                </li>
+                  <a class="nav-link" href="#experienceSkills">Experience & Skills</a>
+                  </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#projects">Projects</a>
                 </li>
@@ -95,6 +95,7 @@
     </div>  
 </nav>
 
+
 <div id="about" class="bluebg">
   <!-- Intro -->
  
@@ -103,44 +104,96 @@
             <h1>Remi Bahar</h1>
             <h2 class= "d-lg-none d-xl-block">Slough, UK</h2>
             <h2><img src="Images/profile.jpg" alt="Remi Bahar profile" class="round"></h2>
+
+
+          <p> 
+            Hi, I'm Remi. I'm a MSc Computer Science student with a passion for technology. 
+            I enjoy developing my skills, currently, I am learning about Linux and am using Fedora.
+
+            My career aspiration is to make an impact as a back-end software engineer working on highly scalable systems.
+          </p>
+
+          <p> I have a range of experience programming, as a Web Developer, in my physics degree, and in my free-time. 
+            Please check out my projects and experience below. 
+          </p>
         
-            <p>
-                Hi, I'm Remi. I'm a MSc Computer Science student and <b>aspiring back-end developer</b>.
-                I have a range of experience programming, as a Web Developer, in my physics degree, and in my free-time. 
-                Please check out my projects below.
-            </p>
+       
         </div>
 
     </div>
 
 </div>
 
-<div id="skills" class="whitebg">
+<div id="experienceSkills" class="whitebg">
+  <h2> Key Experience & Skills</h2>
+  <table class="table table-sm table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Experience</th>
+        <th scope="col">Duties</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Test Engineer @ Comxo, Slough - Feb 2022 to Present</th>
+        <td>  
+          <ul>
+            <li> Significantly devleoped knowledge of software testing and pentesting </li>
+            <li>Wrote detailed test cases and performed end-to-end testing of Comxo mobile app on iOS</li>
+            <li>Worked alongside developers to diagnose and fix defects</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">MSc Computer Science @ Queen Mary University of London - Sep 2021 to Aug 2022 </th>
+        <td>
+          <ul>
+            <li>Developed networking knowledge studying Distributed Systems, Cloud Computing, and Computer Architecture and Networks</li>
+            <li>Developed general software engineering skills studying Functional Programming, Security, and Semi-structured Data</li>
+            <li>Undertook numerous projects including an industrial dissertation project with cmd Consulting GmbH</li>
+          </ul>
+      </td>
+      </tr>
+      <tr>
+        <th scope="row">BSc Physics @ University of Birmingham - Sep 2018 to July 2021</th>
+        <td>
+          <ul>
+            <li>Developed a strong base in problem-solving and Mathematics</li>
+            <li>Applied python to a variety of problems including applying reinforcement learning to a simulation of a person on a swing</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Web Developer @ Comfort Care Services - Aug 2017 to Sep 2018</th>
+        <td>
+          <ul>
+            <li>Developed background in software engineering developing CRUD web-applications using the LAMP stack</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
    <!-- Skills -->
-   <div class="white">
-    <h2> Skills </h2>
+>
 
     <ul class="skills">
-      <li class="skill">HTML</li>
-      <li class="skill">CSS</li>
-      <li class="skill">JavaScript</li>
-      <li class="skill">PHP 1+ years</li>
-      <li class="skill">Haskell</li>
+      <li class="skill">Python (3+ years)</li>
+      <li class="skill">PHP (1+ years), Haskell, JavaScript (Node) </li>
+      <li class="skill">HTML, CSS</li>
       <li class="skill">Linux</li>
-      <li class="skill">GCP</li>
-      <li class="skill">REST</li>
-      <li class="skill">MySQL 1+ years</li>
-      <li class="skill">MongoDB </li>
-      <li class="skill">JSON</li>
-      <li class="skill">XML/XQuery</li>
-      <li class="skill">Python 3+ years</li>
-      <li class="skill">Git/GitHub</li>
+      <li class="skill">Networks</li>
+      <li class="skill">Google Cloud</li>
+      <li class="skill">REST, gRPC</li>
+      <li class="skill">MySQL (1+ years), MongoDB</li>
+      <li class="skill">JSON, XML</li>
+      <li class="skill">Git/GitHub, SVN</li>
      
 
     </ul>
    
     </div>
-</div>
+
 <div id="projects" class="bluebg">
     <div class="bluegradient">
   
@@ -151,7 +204,58 @@
           <div class="col">
             <div class="card h-100">
               <div class="card-header">
-                Haskell Social Network simulation - Jan 2022
+                Microservice @ cmd Consulting GmbH - Ongoing
+              </div>
+              <div class="card-body">
+                
+                For my MSc Computer Science dissertation project I am working with a company based in Germany who develop enterprise applications. 
+                This project will involve developing a CRUD microservice for personal medical records using the oData library.
+                This project will also involve lots of systems engineering as the programming language, database technology, oData library, security, etc all have
+                to be investigated, chosen, and set-up based on meetings with the company. 
+  
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-header">
+                Distributed processing of matrix calculations using Google Cloud @ Queen Mary University of London - Ongoing
+              </div>
+              <div class="card-body">
+                
+                Developed a system to perform matrix calculations using a REST gRPC client and 8 distributed gRPC servers in Google Cloud.
+
+                <h3> Features </h3>
+                <ul>
+                  <li>Implemented REST service using Node + Express to handle uploading matrices as files, matrix multiplication, and addition. </li>
+                  <li> gRPC client used for the REST service and gRPC server used to perform matrix calculations. </li>
+                  <li>Deadline based scaling function used to determine how many servers should be used to perform the matrix calculation. 
+                      This is based on user-supplied deadline, matrix size, and a footprinting function that measures the time taken to multiply two 2x2 matrices
+                  </li>
+                  <li>gRPC load-balancing used to distribute matrix calculations amongst up to 8 servers for performance increases of up to 800%</li>
+                  <li>Matrix calculations were run on large 1000x1000 matrices. </li>
+                </ul>
+
+                <h3> Thoughts </h3>
+              
+                <p> This project taught me a lot about more advanced back-end technologies such as REST architecture, gRPC, and using a cluster of servers to 
+                    improve performance for compute-intensive tasks.
+
+                </p>
+
+      
+                
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-header">
+                Haskell Social Network simulation @ Queen Mary University of London - Jan 2022
               </div>
               <div class="card-body">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -185,7 +289,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="card-header">
-                Twitter API App - Nov 2021
+                Twitter API App @ Queen Mary University of London - Nov 2021
               </div>
               <div class="card-body">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -226,7 +330,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="card-header">
-                Teaching a simulated person how to swing with reinforcement learning - 2021
+                Teaching a simulated person how to swing with reinforcement learning @ University of Birmingham - 2021
               </div>
               <div class="card-body">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -257,7 +361,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="card-header">
-                Python Forest Fire simulation - 2020
+                Python Forest Fire simulation @ University of Birmingham - 2020
               </div>
               <div class="card-body">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -286,7 +390,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="card-header">
-                QA Audit System - 2018
+                QA Audit System @ Comfort Care Services - 2018
               </div>
               <div class="card-body">
     
@@ -315,7 +419,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="card-header">
-                Python technical analysis - 2020
+                Python technical analysis @ Personal - 2020
               </div>
               <div class="card-body">
     
