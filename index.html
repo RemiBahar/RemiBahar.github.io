@@ -225,30 +225,43 @@
                 Distributed processing of matrix calculations using Google Cloud @ Queen Mary University of London - Ongoing
               </div>
               <div class="card-body">
+
+                <div class="embed-responsive embed-responsive-16by9">
+                  <video class="embed-responsive-item lazy" autoplay="autoplay" loop="loop" controls muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto"  poster="Images/social_network_simulation.png">
+                     <source data-src="Videos/matrix-1000.webm" alt="social network simulation" type="video/webm">
+                  </video>
+                </div>
                 
                 Developed a system to perform matrix calculations using a REST gRPC client and 8 distributed gRPC servers in Google Cloud.
+
+                The system was able to multiply 2 1000x1000 matrices in 20s using 1 server and 6s using 8 servers, representing a performance increase of over 300%.
 
                 <h3> Features </h3>
                 <ul>
                   <li>Implemented REST service using Node + Express to handle uploading matrices as files, matrix multiplication, and addition. </li>
-                  <li> gRPC client used for the REST service and gRPC server used to perform matrix calculations. </li>
-                  <li>Deadline based scaling function used to determine how many servers should be used to perform the matrix calculation. 
-                      This is based on user-supplied deadline, matrix size, and a footprinting function that measures the time taken to multiply two 2x2 matrices
-                  </li>
-                  <li>gRPC load-balancing used to distribute matrix calculations amongst up to 8 servers for performance increases of up to 800%</li>
-                  <li>Matrix calculations were run on large 1000x1000 matrices. </li>
+                  <li>gRPC client used for the REST service and gRPC server used to perform matrix calculations. </li>
+                  <li>Deadline based scaling function used to determine how many servers should be used to perform the matrix calculation. </li>
+                  <li>gRPC load-balancing used to distribute matrix calculations amongst up to 8 servers.</li>
+                  <li>Promises and callbacks used to handle asynchronous requests to gRPC server</li>
                 </ul>
 
                 <h3> Thoughts </h3>
               
-                <p> This project taught me a lot about more advanced back-end technologies such as REST architecture, gRPC, and using a cluster of servers to 
-                    improve performance for compute-intensive tasks.
+                <p> 
+                  This project taught me a lot about more advanced back-end technologies such as REST architecture and gRPC.
 
+                  The main challenges was load balancing which was done by splitting the columns of the second matrix2 amongst the gRPC servers and making a single 
+                  call to multiply matrix1 with a smaller subset of matrix2. This project also introduced me to asynchronous programming, as promises and callbacks were used
+                  to wait until all 8 servers had finished before displaying the results to the user. This is something that node.js was particularly suited for. 
                 </p>
 
       
                 
               </div>
+
+              <div class="card-footer d-flex justify-content-center">
+                <a href="https://github.com/RemiBahar/matrix-calculations" target="_blank"><button type="button" class="btn btn-success btn-lg">View Code</button></a>
+            </div>
 
             </div>
           </div>
