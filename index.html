@@ -208,12 +208,39 @@
                 Microservice @ cmd Consulting GmbH - Ongoing
               </div>
               <div class="card-body">
+                <img src="Images/architecture.png" alt="System architecture" class="img-fluid center" id="SystemArchitecture">
+                  <p>
+                    For my MSc Computer science dissertation project, I worked with a German company on an industrial project. The project involved driving healthcare digitalisation 
+                    by developing a proof-of-concept microservice-based healthcare management system. The system was based on the gateway API pattern. 
+                    It focused on increasing healthcare integration by increasing interoperability and encouraging adoption through being GDPR-compliant and easier 
+                    for healthcare providers to implement.
+                  </p>   
+
+                  <h3> Features </h3>
+                  <ul>
+                    <li>Gateway: implemented authentication using JWTs and a IAM service </li>
+                    <li>Gateway: redirected user requests to a secure controller and then to patient service</li>
+                    <li>Patient: decrypted JWT and applied custom authorisation</li>
+                    <li>Used Apache Olingo and JPA (ORM) to automatically create API routes and handle database transactions using the data model</li>
+                    <li>Implemented 70+ automated functional tests, covering the entire process from user to gateway to patient and back</li>
+                  </ul>
+
+                  <h3> Thoughts </h3>
                 
-                For my MSc Computer Science dissertation project I am working with a company based in Germany who develop enterprise applications. 
-                This project will involve developing a CRUD microservice for personal medical records using the oData library.
-                This project will also involve lots of systems engineering as the programming language, database technology, oData library, development environment, security, etc all have
-                to be investigated, chosen, and set-up based on meetings with the company. 
-  
+                  <p> 
+                    Whereas my previous projects focused on particular parts of a software system, this project proved a challenge in requiring me to consider everything from 
+                    authentication/authorisation, to automated testing, and desiging a microservice-based system. I was exposed to Java, Maven, and Spring-Boot (Security, Hibernate, Envers).
+                    Overall, I feel like the project was a success. I developed a core gateway service and patient service that can be extended by integrating additional services with the gateway.
+                    The generic testing methods, JPA, and Olingo make creating a new service easy. Alternatively, the decoupling between microservices mean an API built with entirely different
+                    technologies can be integrated.
+                  </p>
+               
+                </div>
+
+
+                <div class="card-footer d-flex justify-content-center">
+                  <a href="https://github.com/RemiBahar/gateway" target="_blank"><button type="button" class="btn btn-success btn-lg">Gateway Code</button></a>
+                  <a href="https://github.com/RemiBahar/patient" target="_blank"><button type="button" class="btn btn-success btn-lg">Patient Code Code</button></a>
               </div>
 
             </div>
