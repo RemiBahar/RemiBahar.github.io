@@ -45,13 +45,21 @@ nav {
   padding-top:70px;
   padding-bottom:70px
 }
+/*
 .bluebg {
   color: white;
   background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}*/
+.bluebg {
+  color: white;
+  background-color: rgb(10, 79, 120);
 }
+
+
+
 
 /* CSS Grid */
 .row {
